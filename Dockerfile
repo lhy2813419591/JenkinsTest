@@ -9,8 +9,10 @@ COPY . /node
 WORKDIR /node
 
 #安装PM2
+RUN npm install pm2 -g
+
+#安装依赖
 RUN npm install
-RUN npm install -g pm2@latest
 
 #指定时区
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
