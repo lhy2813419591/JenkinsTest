@@ -9,6 +9,7 @@ COPY . /node
 WORKDIR /node
 
 #安装PM2
+RUN npm install
 RUN npm install -g pm2@latest
 
 #指定时区
