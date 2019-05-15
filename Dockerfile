@@ -18,4 +18,4 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 EXPOSE 3000
 
 #启动服务
-CMD ["pm2", "start", "./bin/www","--no-daemon"]
+CMD [ "pm2-runtime", "npm", "--", "start" ]
